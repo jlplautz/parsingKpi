@@ -22,20 +22,24 @@ docker run --name kpiAirScale -e POSTGRES_USER=Solis -e POSTGRES_PASSWORD=Solis2
 # List of radios with their connection details
 radios = [
     {"server_ip": "10.1.16.2", "username": "toor4nsn", "password": "oZPS0POrRieRtu","remote_directory": "/ram/"},
-    {"server_ip": "10.1.16.21","username": "toor4nsn", "password": "oZPS0POrRieRtu","remote_directory": "/ram/"},
-    {"server_ip": "10.1.38.2", "username": "toor4nsn", "password": "oZPS0POrRieRtu","remote_directory": "/ram/"},
-    {"server_ip": "10.1.39.2", "username": "toor4nsn", "password": "oZPS0POrRieRtu","remote_directory": "/ram/"},
-    {"server_ip": "10.1.42.2", "username": "toor4nsn", "password": "oZPS0POrRieRtu","remote_directory": "/ram/"},
-    {"server_ip": "10.1.50.2", "username": "toor4nsn", "password": "oZPS0POrRieRtu","remote_directory": "/ram/"},
-    {"server_ip": "10.1.52.2", "username": "toor4nsn", "password": "oZPS0POrRieRtu","remote_directory": "/ram/"},
-    {"server_ip": "10.1.53.2", "username": "toor4nsn", "password": "oZPS0POrRieRtu","remote_directory": "/ram/"},
-    {"server_ip": "10.1.8.2", "username": "toor4nsn", "password": "oZPS0POrRieRtu","remote_directory": "/ram/"},
+    # {"server_ip": "10.1.16.21","username": "toor4nsn", "password": "oZPS0POrRieRtu","remote_directory": "/ram/"},
+    # {"server_ip": "10.1.38.2", "username": "toor4nsn", "password": "oZPS0POrRieRtu","remote_directory": "/ram/"},
+    # {"server_ip": "10.1.39.2", "username": "toor4nsn", "password": "oZPS0POrRieRtu","remote_directory": "/ram/"},
+    # {"server_ip": "10.1.42.2", "username": "toor4nsn", "password": "oZPS0POrRieRtu","remote_directory": "/ram/"},
+    # {"server_ip": "10.1.50.2", "username": "toor4nsn", "password": "oZPS0POrRieRtu","remote_directory": "/ram/"},
+    # {"server_ip": "10.1.52.2", "username": "toor4nsn", "password": "oZPS0POrRieRtu","remote_directory": "/ram/"},
+    # {"server_ip": "10.1.53.2", "username": "toor4nsn", "password": "oZPS0POrRieRtu","remote_directory": "/ram/"},
+    # {"server_ip": "10.1.8.2", "username": "toor4nsn", "password": "oZPS0POrRieRtu","remote_directory": "/ram/"},
 ]
 
 # Local directory where files will be saved
-dir_zip = r"/var/openkpi/kpi_zip"
-dir_files = r"/var/openkpi/kpi_files"
-dir_files_read = r"/var/openkpi/kpi_files_read"
+# dir_zip = r"/var/openkpi/kpi_zip"
+# dir_files = r"/var/openkpi/kpi_files"
+# dir_files_read = r"/var/openkpi/kpi_files_read"
+dir_zip = r'/Userdata/proj2025/parsingkpi/kpi_zip'
+dir_files = r'/Userdata/proj2025/parsingkpi/kpi_files'
+dir_files_read = r'/Userdata/proj2025/parsingkpi/kpi_files_read'
+
 
 # dir_zip = r"/var/openkpi/kpi_files"
 os.makedirs(dir_zip, exist_ok=True)
@@ -52,12 +56,19 @@ logging.basicConfig(
 )
 
 # PostgreSQL connection config
+# db_config = {
+#     "dbname": os.getenv("kpiAirScale"),
+#     "user": os.getenv("Solis"),
+#     "password": os.getenv("Solis2025"),
+#     "host": os.getenv("localhost"),
+#     "port": int(os.getenv("DB_PORT", 5436))
+# }
 db_config = {
-    "dbname": os.getenv("kpiAirScale"),
-    "user": os.getenv("Solis"),
-    "password": os.getenv("Solis2025"),
-    "host": os.getenv("localhost"),
-    "port": int(os.getenv("DB_PORT", 5436))
+    "dbname": "kpiAirScale",
+    "user": "Solis",
+    "password": "Solis2025",
+    "host": "localhost",
+    "port": 5436
 }
 
 def adjust_file_name(original_name):
@@ -112,16 +123,16 @@ def download_files():
 
                         # Check if the file already exists locally
                         if os.path.exists(local_file_zip):
-                            print(f"File {new_file_name} already exists locally. Skipping download.")
+                            # print(f"File {new_file_name} already exists locally. Skipping download.")
                             continue
 
                         # Download the file with the new name
-                        logging.info(f"Downloading {file_name} as {new_file_name}...")
+                        # logging.info(f"Downloading {file_name} as {new_file_name}...")
                         sftp.get(remote_file_path, local_file_zip)
                         logging.info(f"File {new_file_name} downloaded successfully.")
 
                         # Open the .gz file and write the uncompressed data to the output file
-                        print(local_file_zip)
+                        #print(local_file_zip)
                         with gzip.open(local_file_zip, 'rb') as f_in:
                             with open(local_file_path, 'wb') as f_out:
                                 shutil.copyfileobj(f_in, f_out)
@@ -154,7 +165,7 @@ def download_files():
                 if transport: transport.close()
                 
             if attempt < max_retries - 1:
-                logging.info(f"Retrying in {retry_delay} seconds...")
+                # logging.info(f"Retrying in {retry_delay} seconds...")
                 sleep(retry_delay)
                 retry_delay *= 2  # Exponential backoff
 
@@ -169,31 +180,58 @@ def download_files():
 def create_table_if_not_exists(measurementType, kpi_columns):
     conn = psycopg2.connect(**db_config)
     cursor = conn.cursor()
-    columns = ', '.join([f'"{col}" INTEGER' for col in kpi_columns])
-    create_table_query = f'''
-    CREATE TABLE IF NOT EXISTS "{measurementType}" (
-        id SERIAL PRIMARY KEY,
-        create_at TIMESTAMP,
-        manage_object TEXT,
-        {columns}
-    );
-    '''
-    cursor.execute(create_table_query)
-    conn.commit()
+
+    # Check if measurementType exists in empty_kpi_group
+    cursor.execute(
+        'SELECT 1 FROM "Empty_kpiGroup" WHERE kpigroup = %s LIMIT 1;',
+        (measurementType,)
+    )
+    exists = cursor.fetchone()
+
+    if exists:
+        pass
+        # logging.info(f"Table for measurementType '{measurementType}' is in empty_kpi_group. Skipping creation.")
+    else:
+        columns = ', '.join([f'"{col}" INTEGER' for col in kpi_columns])
+        create_table_query = f'''
+        CREATE TABLE IF NOT EXISTS "{measurementType}" (
+            id SERIAL PRIMARY KEY,
+            create_at TIMESTAMP,
+            manage_object TEXT,
+            {columns}
+        );
+        '''
+        cursor.execute(create_table_query)
+        conn.commit()
+        # logging.info(f"Created table for measurementType '{measurementType}'.")
+
     cursor.close()
     conn.close()
 
 def insert_into_table(measurementType, data, kpi_columns):
     conn = psycopg2.connect(**db_config)
     cursor = conn.cursor()
-    columns = ', '.join([f'"{col}"' for col in kpi_columns])
-    placeholders = ', '.join(['%s'] * (len(kpi_columns) + 2))  # +2 for create_at and manage_object
-    insert_query = f'''
-    INSERT INTO "{measurementType}" (create_at, manage_object, {columns})
-    VALUES ({placeholders})
-    '''
-    cursor.executemany(insert_query, data)
-    conn.commit()
+
+    # Check if measurementType exists in empty_kpi_group
+    cursor.execute(
+        'SELECT 1 FROM "Empty_kpiGroup" WHERE kpigroup = %s LIMIT 1;',
+        (measurementType,)
+    )
+    exists = cursor.fetchone()
+
+    if exists:
+        pass
+        # logging.info(f"Table for measurementType '{measurementType}' is in empty_kpi_group. Skipping insertion.")
+    else:
+        columns = ', '.join([f'"{col}"' for col in kpi_columns])
+        placeholders = ', '.join(['%s'] * (len(kpi_columns) + 2))  # +2 for create_at and manage_object
+        insert_query = f'''
+        INSERT INTO "{measurementType}" (create_at, manage_object, {columns})
+        VALUES ({placeholders})
+        '''
+        cursor.executemany(insert_query, data)
+        conn.commit()
+        
     cursor.close()
     conn.close()
 
@@ -245,5 +283,5 @@ def process_all_files():
 
 # Main Execution
 if __name__ == "__main__":
-    download_files()
+    # download_files()
     process_all_files()
