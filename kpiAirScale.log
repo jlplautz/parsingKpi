@@ -1,0 +1,92 @@
+2025-06-11 10:35:14,292 [INFO] Attempt 1/1 to connect to 10.1.16.2
+2025-06-11 10:35:14,466 [INFO] Connected (version 2.0, client OpenSSH_9.4p1)
+2025-06-11 10:35:14,944 [INFO] Auth banner: b'You are about to access a private system. This system is for the use of authorized users only. All connections are logged to the extent and by means acceptable by the local legislation. Any unauthorized access or access attempts may be punished to the fullest extent possible under the applicable local legislation.\n'
+2025-06-11 10:35:14,945 [INFO] Authentication (password) successful!
+2025-06-11 10:35:15,310 [INFO] [chan 0] Opened sftp connection (server version 3)
+2025-06-11 10:35:15,315 [INFO] Connecting to server 10.1.16.2...
+2025-06-11 10:35:16,470 [INFO] File PM.BTS-100004.20250611.130000.xml downloaded successfully.
+2025-06-11 10:35:16,501 [INFO] [chan 0] sftp session closed.
+2025-06-11 10:35:16,502 [INFO] Successfully processed files from 10.1.16.2
+2025-06-11 10:35:16,502 [INFO] Attempt 1/1 to connect to 10.1.16.21
+2025-06-11 10:35:16,671 [INFO] Connected (version 2.0, client OpenSSH_9.4p1)
+2025-06-11 10:35:17,183 [INFO] Auth banner: b'You are about to access a private system. This system is for the use of authorized users only. All connections are logged to the extent and by means acceptable by the local legislation. Any unauthorized access or access attempts may be punished to the fullest extent possible under the applicable local legislation.\n'
+2025-06-11 10:35:17,184 [INFO] Authentication (password) successful!
+2025-06-11 10:35:17,576 [INFO] [chan 0] Opened sftp connection (server version 3)
+2025-06-11 10:35:17,576 [INFO] Connecting to server 10.1.16.21...
+2025-06-11 10:35:20,225 [INFO] File PM.BTS-100001.20250611.130000.xml downloaded successfully.
+2025-06-11 10:35:20,242 [INFO] [chan 0] sftp session closed.
+2025-06-11 10:35:20,243 [INFO] Successfully processed files from 10.1.16.21
+2025-06-11 10:35:20,243 [INFO] Attempt 1/1 to connect to 10.1.38.2
+2025-06-11 10:35:20,381 [INFO] Connected (version 2.0, client OpenSSH_9.4p1)
+2025-06-11 10:35:20,778 [INFO] Auth banner: b'You are about to access a private system. This system is for the use of authorized users only. All connections are logged to the extent and by means acceptable by the local legislation. Any unauthorized access or access attempts may be punished to the fullest extent possible under the applicable local legislation.\n'
+2025-06-11 10:35:20,779 [INFO] Authentication (password) successful!
+2025-06-11 10:35:21,078 [INFO] [chan 0] Opened sftp connection (server version 3)
+2025-06-11 10:35:21,078 [INFO] Connecting to server 10.1.38.2...
+2025-06-11 10:35:22,013 [INFO] File PM.BTS-771701.20250611.130000.xml downloaded successfully.
+2025-06-11 10:35:22,041 [INFO] [chan 0] sftp session closed.
+2025-06-11 10:35:22,042 [INFO] Successfully processed files from 10.1.38.2
+2025-06-11 10:35:22,042 [INFO] Attempt 1/1 to connect to 10.1.39.2
+2025-06-11 10:35:22,238 [INFO] Connected (version 2.0, client OpenSSH_9.4p1)
+2025-06-11 10:35:22,800 [INFO] Auth banner: b'You are about to access a private system. This system is for the use of authorized users only. All connections are logged to the extent and by means acceptable by the local legislation. Any unauthorized access or access attempts may be punished to the fullest extent possible under the applicable local legislation.\n'
+2025-06-11 10:35:22,800 [INFO] Authentication (password) successful!
+2025-06-11 10:35:23,218 [INFO] [chan 0] Opened sftp connection (server version 3)
+2025-06-11 10:35:23,218 [INFO] Connecting to server 10.1.39.2...
+2025-06-11 10:35:24,579 [INFO] File PM.BTS-772001.20250611.130000.xml downloaded successfully.
+2025-06-11 10:35:24,599 [INFO] [chan 0] sftp session closed.
+2025-06-11 10:35:24,600 [INFO] Successfully processed files from 10.1.39.2
+2025-06-11 10:35:24,600 [INFO] Attempt 1/1 to connect to 10.1.42.2
+2025-06-11 10:35:24,764 [INFO] Connected (version 2.0, client OpenSSH_9.4p1)
+2025-06-11 10:35:25,290 [INFO] Auth banner: b'You are about to access a private system. This system is for the use of authorized users only. All connections are logged to the extent and by means acceptable by the local legislation. Any unauthorized access or access attempts may be punished to the fullest extent possible under the applicable local legislation.\n'
+2025-06-11 10:35:25,291 [INFO] Authentication (password) successful!
+2025-06-11 10:35:25,659 [INFO] [chan 0] Opened sftp connection (server version 3)
+2025-06-11 10:35:25,660 [INFO] Connecting to server 10.1.42.2...
+2025-06-11 10:35:26,906 [INFO] File PM.BTS-342401.20250611.130000.xml downloaded successfully.
+2025-06-11 10:35:26,932 [INFO] [chan 0] sftp session closed.
+2025-06-11 10:35:26,932 [INFO] Successfully processed files from 10.1.42.2
+2025-06-11 10:35:26,933 [INFO] Attempt 1/1 to connect to 10.1.50.2
+2025-06-11 10:35:27,064 [INFO] Connected (version 2.0, client OpenSSH_9.4p1)
+2025-06-11 10:35:27,452 [INFO] Auth banner: b'You are about to access a private system. This system is for the use of authorized users only. All connections are logged to the extent and by means acceptable by the local legislation. Any unauthorized access or access attempts may be punished to the fullest extent possible under the applicable local legislation.\n'
+2025-06-11 10:35:27,454 [INFO] Authentication (password) successful!
+2025-06-11 10:35:27,757 [INFO] [chan 0] Opened sftp connection (server version 3)
+2025-06-11 10:35:27,757 [INFO] Connecting to server 10.1.50.2...
+2025-06-11 10:35:28,632 [INFO] File PM.BTS-342511.20250611.130000.xml downloaded successfully.
+2025-06-11 10:35:28,653 [INFO] [chan 0] sftp session closed.
+2025-06-11 10:35:28,655 [INFO] Successfully processed files from 10.1.50.2
+2025-06-11 10:35:28,656 [INFO] Attempt 1/1 to connect to 10.1.52.2
+2025-06-11 10:35:28,792 [INFO] Connected (version 2.0, client OpenSSH_9.4p1)
+2025-06-11 10:35:29,183 [INFO] Auth banner: b'You are about to access a private system. This system is for the use of authorized users only. All connections are logged to the extent and by means acceptable by the local legislation. Any unauthorized access or access attempts may be punished to the fullest extent possible under the applicable local legislation.\n'
+2025-06-11 10:35:29,184 [INFO] Authentication (password) successful!
+2025-06-11 10:35:29,482 [INFO] [chan 0] Opened sftp connection (server version 3)
+2025-06-11 10:35:29,482 [INFO] Connecting to server 10.1.52.2...
+2025-06-11 10:35:30,375 [INFO] File PM.BTS-342501.20250611.130000.xml downloaded successfully.
+2025-06-11 10:35:30,404 [INFO] [chan 0] sftp session closed.
+2025-06-11 10:35:30,407 [INFO] Successfully processed files from 10.1.52.2
+2025-06-11 10:35:30,407 [INFO] Attempt 1/1 to connect to 10.1.53.2
+2025-06-11 10:35:30,568 [INFO] Connected (version 2.0, client OpenSSH_9.4p1)
+2025-06-11 10:35:30,993 [INFO] Auth banner: b'You are about to access a private system. This system is for the use of authorized users only. All connections are logged to the extent and by means acceptable by the local legislation. Any unauthorized access or access attempts may be punished to the fullest extent possible under the applicable local legislation.\n'
+2025-06-11 10:35:30,994 [INFO] Authentication (password) successful!
+2025-06-11 10:35:31,304 [INFO] [chan 0] Opened sftp connection (server version 3)
+2025-06-11 10:35:31,305 [INFO] Connecting to server 10.1.53.2...
+2025-06-11 10:35:32,310 [INFO] File PM.BTS-342504.20250611.130000.xml downloaded successfully.
+2025-06-11 10:35:32,334 [INFO] [chan 0] sftp session closed.
+2025-06-11 10:35:32,335 [INFO] Successfully processed files from 10.1.53.2
+2025-06-11 10:35:32,336 [INFO] Attempt 1/1 to connect to 10.1.8.2
+2025-06-11 10:35:32,475 [INFO] Connected (version 2.0, client OpenSSH_9.4p1)
+2025-06-11 10:35:32,886 [INFO] Auth banner: b'You are about to access a private system. This system is for the use of authorized users only. All connections are logged to the extent and by means acceptable by the local legislation. Any unauthorized access or access attempts may be punished to the fullest extent possible under the applicable local legislation.\n'
+2025-06-11 10:35:32,886 [INFO] Authentication (password) successful!
+2025-06-11 10:35:33,182 [INFO] [chan 0] Opened sftp connection (server version 3)
+2025-06-11 10:35:33,183 [INFO] Connecting to server 10.1.8.2...
+2025-06-11 10:35:34,187 [INFO] File PM.BTS-690205.20250611.130000.xml downloaded successfully.
+2025-06-11 10:35:34,200 [INFO] [chan 0] sftp session closed.
+2025-06-11 10:35:34,201 [INFO] Successfully processed files from 10.1.8.2
+2025-06-11 10:35:34,260 [INFO] Processing file: /Userdata/proj2025/parsingkpi/kpi_files\PM.BTS-100001.20250611.130000.xml
+2025-06-11 11:01:07,056 [INFO] Processing file: /Userdata/proj2025/parsingkpi/kpi_files\PM.BTS-100001.20250611.130000.xml
+2025-06-11 11:02:56,707 [INFO] Processing file: /Userdata/proj2025/parsingkpi/kpi_files\PM.BTS-100001.20250611.130000.xml
+2025-06-11 11:03:05,271 [INFO] Processing file: /Userdata/proj2025/parsingkpi/kpi_files\PM.BTS-100004.20250611.130000.xml
+2025-06-11 11:03:10,603 [INFO] Processing file: /Userdata/proj2025/parsingkpi/kpi_files\PM.BTS-342401.20250611.130000.xml
+2025-06-11 11:03:18,856 [INFO] Processing file: /Userdata/proj2025/parsingkpi/kpi_files\PM.BTS-342501.20250611.130000.xml
+2025-06-11 11:03:26,975 [INFO] Processing file: /Userdata/proj2025/parsingkpi/kpi_files\PM.BTS-342504.20250611.130000.xml
+2025-06-11 11:03:36,174 [INFO] Processing file: /Userdata/proj2025/parsingkpi/kpi_files\PM.BTS-342511.20250611.130000.xml
+2025-06-11 11:03:45,911 [INFO] Processing file: /Userdata/proj2025/parsingkpi/kpi_files\PM.BTS-690205.20250611.130000.xml
+2025-06-11 11:03:56,656 [INFO] Processing file: /Userdata/proj2025/parsingkpi/kpi_files\PM.BTS-771701.20250611.130000.xml
+2025-06-11 11:04:01,677 [INFO] Processing file: /Userdata/proj2025/parsingkpi/kpi_files\PM.BTS-772001.20250611.130000.xml
